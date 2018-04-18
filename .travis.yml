@@ -8,7 +8,7 @@ jobs:
       install: npm install --global create-dmg
       script: create-dmg 'atemOSC.app' || true
       script: echo "$(find atemOSC-*.dmg)"
-      script: [ -f atemOSC-*.dmg ]
+      script: find atemOSC-*.dmg
     - stage: deploy
       deploy:
         - provider: pages
